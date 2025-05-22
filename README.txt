@@ -24,13 +24,14 @@ Pasos:
 
 
 Estructura de directoris:
-	\___docker-compose.yml
-	 \__wait-for-it.sh
-	  \_logstash
-	            \_pipeline
-	                      \___netflow_to_kafka.conf
-	                       \__kafka_to_elastic.conf
-	                        \_kafka_to_csv.conf
+	\____docker-compose.yml
+	 \___dades
+	  \__wait-for-it.sh
+	   \_logstash
+	             \_pipeline
+	                       \___netflow_to_kafka.conf
+	                        \__kafka_to_elastic.conf
+	                         \_kafka_to_csv.conf
                        
                        
 Comandes útils:
