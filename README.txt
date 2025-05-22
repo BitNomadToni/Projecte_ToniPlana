@@ -32,10 +32,11 @@ Estructura de directoris:
 	                        \_kafka_to_csv.conf
                        
                        
-Tenir en compte:
+Comandes útils:
+
 	1. Ruta on es guarda el csv amb el trafic al contenidor logstash: "/tmp/sortida.csv" comanda per a acedir al contenidor: "docker exex -it logstash /bin/bash"
 	2. Comanda per a copiar les dades del csv a la carpeta dades: "docker cp logstash:/tmp/csv ./dades"
-	3. Hi ha que tenir en conter els firewalls tant del router mikrotik com de la nostra màquina.
+	
 	
 	
 	
@@ -44,5 +45,7 @@ Notes addicionals:
 El pipeline CSV és opcional, es pot activar o desactivar segons necessitat.
 
 El wait-for-it.sh ajuda a gestionar l'ordre d'arrencada dels serveis perquè Kafka no intente connectar a Zookeeper abans que estiga llest.
+
+Hi ha que tenir en compte els firewalls tant del router mikrotik com de la nostra màquina.
 
 És recomanable revisar que la xarxa valldignalive_net estiga creada i que tots els contenidors la utilitzen per comunicar-se entre ells.
