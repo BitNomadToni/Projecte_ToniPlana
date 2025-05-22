@@ -1,3 +1,4 @@
+Guia de monitorage i analisi.
 Pasos:
 	1.Ens situem en la carpeta on estiga el dockerfile i executem el segúent: "docker build -t logstash-custom:8.12.0 ." Imatge per a que logstash instale plugin per a csv automàticament.
 	2.Creem la xarxa: "docker network create valldigna_net"
