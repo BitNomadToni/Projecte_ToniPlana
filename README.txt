@@ -18,11 +18,12 @@ Estructura de directoris:
 	 \__wait-for-it.sh
 	  \_logstash
 	            \_pipeline
-	                      \__netflow_to_kafka.conf
-	                       \_kafka_to_elastic_and_csv.conf
-                       
+	                      \___netflow_to_kafka.conf
+	                       \__kafka_to_elastic.conf
+				 \_kafka_to_csv.conf
                        
                        
 Tenir en compte:
-	1. Ruta on es guarda el csv amb el trafic al contenidor logstash: /tmp/sortida.csv comanda per a acedir al contenidor. "docker exex -it logstash /bin/bash"
-	2.
+	1. Ruta on es guarda el csv amb el trafic al contenidor logstash: "/tmp/sortida.csv" comanda per a acedir al contenidor: "docker exex -it logstash /bin/bash"
+	2. Comanda per a copiar les dades del csv a la carpeta dades: "docker cp logstash:/tmp/csv ./dades
+"
