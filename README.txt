@@ -1,4 +1,4 @@
-Guia de monitorage i analisi.
+Guia de monitorage de xarxa.
 Pasos:
 	1.Ens situem en la carpeta on estiga el dockerfile i executem el segúent: "docker build -t logstash-custom:8.12.0 ." Imatge per a que logstash instale plugin per a csv automàticament.
 	2.Creem la xarxa: "docker network create valldigna_net"
@@ -26,12 +26,13 @@ Pasos:
 Estructura de directoris:
 	\____docker-compose.yml
 	 \___dades
-	  \__wait-for-it.sh
-	   \_logstash
-	             \_pipeline
-	                       \___netflow_to_kafka.conf
-	                        \__kafka_to_elastic.conf
-	                         \_kafka_to_csv.conf
+	  \       \_sortida.csv
+	   \__wait-for-it.sh
+	    \_logstash
+	              \_pipeline
+	                        \___netflow_to_kafka.conf
+	                         \__kafka_to_elastic.conf
+	                          \_kafka_to_csv.conf
                        
                        
 Comandes útils:
