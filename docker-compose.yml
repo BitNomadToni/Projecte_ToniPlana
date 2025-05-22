@@ -1,0 +1,145 @@
+#Projecte Toni Plana 028
+version: '3.8'
+
+services:
+#1-Input (entrada de dades): node-red, logstash, kafka (productors), zookeeper
+
+  node-red:
+    image: nodered/node-red:3.1.0
+    container_name: node-red
+    ports:
+      - "1880:1880"
+    volumes:
+      - node_red_data:/data
+    networks:
+      - valldigna_net
+    restart: "no" # No es reinicia si falla
+
+
+  #Rep les dades del Mikrotik(NetFlow) a través del port 2055.
+  logstash:
+    image: logstash-custom:8.12.0
+    container_name: logstash
+    ports:
+      - "2055:2055/udp" # port extern per a Netflow
+    volumes:
+      - logstash_data:/usr/share/logstash/data # dades de logstash
+      - ./logstash/pipeline:/usr/share/logstash/pipeline # carpeta de configuració
+    depends_on:
+      - kafka
+    networks:
+    - valldigna_net  
+    restart: on-failure  # Es reinicia si falla
+    
+    
+#2-Process (anàlisi o conversió): logstash, kafka (brokers)
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    container_name: kafka
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+      - ./wait-for-it.sh:/wait-for-it.sh  # Muntar script dins contenidor
+    networks:
+      - valldigna_net
+    restart: on-failure
+    entrypoint: ["/bin/sh", "-c", "/wait-for-it.sh zookeeper:2181 -t 60 -- /etc/confluent/docker/run"]
+
+    
+  kafka-ui:  # Entorn Gràfic Kafka
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
+    ports:
+      - "8080:8080"
+    depends_on:
+      - kafka
+    networks:
+      - valldigna_net  
+    restart: always
+  zookeeper: # No es necessari si utilitzem una versió de Kafka qeu soporte KRaft
+    image: confluentinc/cp-zookeeper:7.4.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+    networks:
+      - valldigna_net
+    restart: on-failure # Es reinicia si falla
+
+
+#3-Output (visualització o consulta): elasticsearch, kibana
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false  # Desactiva la seguritat en proves
+    ports:
+      - "9200:9200" # port pricipal
+      - "9300:9300" # port de comunicació entre nodes del clúster(opcional)
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data
+    networks:
+      - valldigna_net
+    restart: on-failure # Es reinicia si falla
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      # - ELASTICSEARCH_USERNAME=elastic
+      # - ELASTICSEARCH_PASSWORD=changeme
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - valldigna_net
+    restart: on-failure # Es reinicia si falla
+
+volumes:
+  elastic_data: # indexos i dades d'elasticsearch
+    driver: local
+  node_red_data: # fluxos de node-red
+    driver: local
+  kafka_data: # logs i temes de kafka
+    driver: local
+  logstash_data: #configuracions i pipelines de logstash
+    driver: local
+  zookeeper_data: # metadades de zookeeper
+    driver: local
+  # Es crea un volum per a cada servei
+  # i es guarda a la carpeta corresponent
+
+networks:
+  valldigna_net:
+    external: true
+    #driver: bridge # Es crea una xarxa externa quan no hi ha ninguna creada
+    # Es crea una xarxa per a tots els serveis
+
+
+
+
+
+
