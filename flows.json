@@ -1,0 +1,1528 @@
+[
+    {
+        "id": "497f9339409cef03",
+        "type": "tab",
+        "label": "Kafka",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fd7b3377748032d0",
+        "type": "group",
+        "z": "497f9339409cef03",
+        "name": "IP/ PORT",
+        "style": {
+            "stroke": "#001f60",
+            "fill": "#3f93cf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "b04ac45a5e044649",
+            "fa09955065454635",
+            "6cab48fbbde00917",
+            "9337b7342eae7d10",
+            "7e3ce2a0ad844b82",
+            "771ce6f54e393144",
+            "b934e3c9145f893c",
+            "c1174a9e1121985a",
+            "298515d03b9f3165",
+            "2f53072ac76ad70c",
+            "efe65de5060ecceb"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 1212,
+        "h": 362
+    },
+    {
+        "id": "de3495bc585067f0",
+        "type": "group",
+        "z": "497f9339409cef03",
+        "name": "INTERFACE/TIME",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "864c1db7b106d774",
+            "2df1b1defa6533f2",
+            "baaf6b78dd3f04de",
+            "e16c696e14fa2efb",
+            "dbb4489c8d43c8a3",
+            "5a8ad1f1325ffcc9",
+            "1efbd05630b4f729",
+            "c06650e9e5711d62",
+            "8aea0a46efb405c7",
+            "3350dd8664c8406c",
+            "e82f4e42fa96ff94"
+        ],
+        "x": 54,
+        "y": 439,
+        "w": 1202,
+        "h": 362
+    },
+    {
+        "id": "57a5dd492e43f828",
+        "type": "group",
+        "z": "497f9339409cef03",
+        "name": "GEO IP",
+        "style": {
+            "stroke": "#0070c0",
+            "label": true,
+            "color": "#001f60",
+            "fill": "#3f93cf"
+        },
+        "nodes": [
+            "3a4d8cbdd076258c",
+            "5fdd3b841c2535b9",
+            "70ff9bbf78682449",
+            "b8e55e9b8849a5de",
+            "6582d0a42a7cbe7a",
+            "b32ad0b2fe3bc189"
+        ],
+        "x": 34,
+        "y": 859,
+        "w": 1192,
+        "h": 142
+    },
+    {
+        "id": "f43e1dd9620df8c9",
+        "type": "group",
+        "z": "497f9339409cef03",
+        "name": "PARAMETRES (MBPS, ERRORS..)",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#001f60"
+        },
+        "nodes": [
+            "d63fc120055f1815",
+            "6d9a442ba104454c",
+            "d5b5f89a9a9c7ba1",
+            "d5094ca16cb909e8",
+            "964ce91ac8702edf",
+            "3b8b15071e416cd9",
+            "4c7018a94396aaab",
+            "a19aa65da6ee7d60",
+            "e5370fa739cfd1e3",
+            "1bd6a1e71fe164f4",
+            "9f574fc1dcf38f79",
+            "d4c9bcdef5e9d8be",
+            "e15812e72335f79f",
+            "6bb9e3e889fbb654",
+            "5e8ffde50c3bbeb8",
+            "6ef81229c53f7bda"
+        ],
+        "x": 34,
+        "y": 1079,
+        "w": 1222,
+        "h": 482
+    },
+    {
+        "id": "5ba851299043f444",
+        "type": "group",
+        "z": "497f9339409cef03",
+        "name": "DETECCIÓ VPN i TOR",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "18c6a53636a6ff12",
+            "38b12efbd7e902ed",
+            "c9dabdf7793d8f8e",
+            "3587d89182f8deff",
+            "26e09fe3fad1f851",
+            "9e3a0fd96d62a1d0",
+            "15cd29cd742b9ea1",
+            "7188cd94ff567908",
+            "16f976b2738a5978",
+            "09ae00337918f3cf",
+            "4e64bdc39380e8e5"
+        ],
+        "x": 34,
+        "y": 1619,
+        "w": 1202,
+        "h": 302
+    },
+    {
+        "id": "8d6e5eabfb58985b",
+        "type": "group",
+        "z": "497f9339409cef03",
+        "name": "DETECCIÓ MITM (proxi i Geo IP)",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "076e8ac1ff1976af",
+            "ecfd681e3b9ea6e8",
+            "8aaa469678428eab",
+            "88a63af9795cb6b2",
+            "174eaa1b0d0ce256",
+            "b35f6c9694052aef"
+        ],
+        "x": 34,
+        "y": 2019,
+        "w": 1182,
+        "h": 142
+    },
+    {
+        "id": "b04ac45a5e044649",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1060,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "fa09955065454635",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "Convertir JSON",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 100,
+        "wires": [
+            [
+                "b04ac45a5e044649",
+                "7e3ce2a0ad844b82"
+            ]
+        ]
+    },
+    {
+        "id": "6cab48fbbde00917",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "JavaScript",
+        "func": "const protocols = [\"TCP\", \"UDP\", \"ICMP\", \"Torrents\", \"Proxies\"];\nconst ports = [80, 443, 53, 6881, 22, 21, 8080, 3128];\n\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\nmsg.payload = {\n    type: \"NetworkTrafficObserved\",\n    sourceIP: randomIP(),\n    destinationIP: randomIP(),\n    protocol: protocols[Math.floor(Math.random() * protocols.length)],\n    port: ports[Math.floor(Math.random() * ports.length)],\n    bytes: Math.floor(Math.random() * (50000 - 100 + 1)) + 100,\n    timestamp: new Date().toISOString()\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "fa09955065454635"
+            ]
+        ]
+    },
+    {
+        "id": "9337b7342eae7d10",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": " 1. Trànsit per protocol i port",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"NetworkTrafficObserved\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"destinationIP\": \"{{destinationIP}}\",\n  \"protocol\": \"{{protocol}}\",\n  \"port\": {{port}},\n  \"bytes\": {{bytes}},\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "6cab48fbbde00917"
+            ]
+        ]
+    },
+    {
+        "id": "7e3ce2a0ad844b82",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "771ce6f54e393144",
+        "type": "inject",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "2f53072ac76ad70c",
+                "9337b7342eae7d10"
+            ]
+        ]
+    },
+    {
+        "id": "b934e3c9145f893c",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1140,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c1174a9e1121985a",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "b934e3c9145f893c",
+                "efe65de5060ecceb"
+            ]
+        ]
+    },
+    {
+        "id": "298515d03b9f3165",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "JavaScript",
+        "func": "const clients = [\"client-001\", \"client-002\", \"client-073\", \"client-105\", \"client-212\"];\nconst externalIPs = [\"8.8.8.8\", \"1.1.1.1\", \"185.60.216.35\", \"104.244.42.1\", \"52.85.173.12\"];\n\nfunction randomIP(type = \"internal\") {\n    if (type === \"internal\") {\n        // IP privada tipus 192.168.x.x o 10.x.x.x\n        return Math.random() < 0.5\n            ? `192.168.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`\n            : `10.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n    } else {\n        return externalIPs[Math.floor(Math.random() * externalIPs.length)];\n    }\n}\n\nconst bytesSent = Math.floor(Math.random() * 100000);\nconst bytesReceived = Math.floor(Math.random() * 50000);\nconst isSuspicious = bytesSent > 80000 || bytesReceived > 40000;\n\nmsg.payload = {\n    type: \"IPTrafficAnalysis\",\n    clientId: clients[Math.floor(Math.random() * clients.length)],\n    sourceIP: randomIP(\"internal\"),\n    destinationIP: randomIP(\"external\"),\n    sourceType: \"internal\",\n    destinationType: \"external\",\n    bytesSent: bytesSent,\n    bytesReceived: bytesReceived,\n    timestamp: new Date().toISOString(),\n    isSuspicious: isSuspicious\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "c1174a9e1121985a"
+            ]
+        ]
+    },
+    {
+        "id": "2f53072ac76ad70c",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "2. Anàlisi de trànsit per IP",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"IPTrafficAnalysis\",\n  \"clientId\": \"client-073\",\n  \"sourceIP\": \"192.168.1.45\",\n  \"destinationIP\": \"8.8.8.8\",\n  \"sourceType\": \"internal\",\n  \"destinationType\": \"external\",\n  \"bytesSent\": 40236,\n  \"bytesReceived\": 15894,\n  \"timestamp\": \"2025-05-13T18:32:11.021Z\",\n  \"isSuspicious\": false\n}\n",
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "298515d03b9f3165"
+            ]
+        ]
+    },
+    {
+        "id": "efe65de5060ecceb",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "g": "fd7b3377748032d0",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "864c1db7b106d774",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1150,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2df1b1defa6533f2",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 560,
+        "wires": [
+            [
+                "864c1db7b106d774",
+                "dbb4489c8d43c8a3"
+            ]
+        ]
+    },
+    {
+        "id": "baaf6b78dd3f04de",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "JavaScript",
+        "func": "const interfaces = [\"ether1\", \"ether2\", \"pppoe-out\", \"wlan1\", \"vlan10\"];\n\nfunction getRandomInt(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nmsg.payload = {\n    type: \"InterfaceTrafficObserved\",\n    interface: interfaces[getRandomInt(0, interfaces.length - 1)],\n    trafficIn: getRandomInt(10000, 500000),  // bytes entrada\n    trafficOut: getRandomInt(10000, 500000), // bytes eixida\n    errors: getRandomInt(0, 5),\n    drops: getRandomInt(0, 5),\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "2df1b1defa6533f2"
+            ]
+        ]
+    },
+    {
+        "id": "e16c696e14fa2efb",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "3. Anàlisi per interfície de xarxa",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"InterfaceTrafficObserved\",\n  \"interface\": \"{{interface}}\",\n  \"trafficIn\": {{trafficIn}},\n  \"trafficOut\": {{trafficOut}},\n  \"errors\": {{errors}},\n  \"drops\": {{drops}},\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "baaf6b78dd3f04de"
+            ]
+        ]
+    },
+    {
+        "id": "dbb4489c8d43c8a3",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5a8ad1f1325ffcc9",
+        "type": "inject",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 640,
+        "wires": [
+            [
+                "3350dd8664c8406c",
+                "e16c696e14fa2efb"
+            ]
+        ]
+    },
+    {
+        "id": "1efbd05630b4f729",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1150,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "c06650e9e5711d62",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 740,
+        "wires": [
+            [
+                "1efbd05630b4f729",
+                "e82f4e42fa96ff94"
+            ]
+        ]
+    },
+    {
+        "id": "8aea0a46efb405c7",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "JavaScript",
+        "func": "const timeOfDayOptions = [\"Morning\", \"Afternoon\", \"Evening\", \"Night\"];\nconst trafficVolume = Math.floor(Math.random() * (1000000 - 10000 + 1)) + 10000; // Trànsit aleatori en bytes\nconst trafficPeak = Math.floor(Math.random() * (500000 - 100000 + 1)) + 100000; // Pics de trànsit (hores punta)\nconst trafficOffPeak = Math.floor(Math.random() * (100000 - 50000 + 1)) + 50000; // Trànsit en hores vall\n\n// Seleccionar aleatòriament l'hora del dia\nconst timeOfDay = timeOfDayOptions[Math.floor(Math.random() * timeOfDayOptions.length)];\n\nmsg.payload = {\n    type: \"TrafficPatternObserved\",\n    timeOfDay: timeOfDay,\n    trafficVolume: trafficVolume,\n    trafficPeak: trafficPeak,\n    trafficOffPeak: trafficOffPeak,\n    timestamp: new Date().toISOString() // Timestamp actual\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "c06650e9e5711d62"
+            ]
+        ]
+    },
+    {
+        "id": "3350dd8664c8406c",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "4. Patrons de trànsit en el temps",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"TrafficPatternObserved\",\n  \"timeOfDay\": \"{{timeOfDay}}\",\n  \"trafficVolume\": {{trafficVolume}},\n  \"trafficPeak\": {{trafficPeak}},\n  \"trafficOffPeak\": {{trafficOffPeak}},\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 390,
+        "y": 740,
+        "wires": [
+            [
+                "8aea0a46efb405c7"
+            ]
+        ]
+    },
+    {
+        "id": "e82f4e42fa96ff94",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "de3495bc585067f0",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "3a4d8cbdd076258c",
+        "type": "inject",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "57a5dd492e43f828",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "6582d0a42a7cbe7a"
+            ]
+        ]
+    },
+    {
+        "id": "5fdd3b841c2535b9",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "57a5dd492e43f828",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1120,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "70ff9bbf78682449",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "57a5dd492e43f828",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 940,
+        "wires": [
+            [
+                "5fdd3b841c2535b9",
+                "b32ad0b2fe3bc189"
+            ]
+        ]
+    },
+    {
+        "id": "b8e55e9b8849a5de",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "57a5dd492e43f828",
+        "name": "JavaScript",
+        "func": "const countries = [\"US\", \"RU\", \"CN\", \"DE\", \"IN\", \"BR\", \"KR\", \"GB\"];\nconst geoLocations = [\"North America\", \"Europe\", \"Asia\", \"South America\", \"Africa\"];\nconst trafficVolume = Math.floor(Math.random() * (1000000 - 50000 + 1)) + 50000; // Trànsit aleatori en bytes\n\n// Generar IPs aleatories\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Seleccionar aleatòriament els països i les ubicacions geogràfiques\nconst sourceCountry = countries[Math.floor(Math.random() * countries.length)];\nconst destinationCountry = countries[Math.floor(Math.random() * countries.length)];\nconst geoLocationSource = geoLocations[Math.floor(Math.random() * geoLocations.length)];\nconst geoLocationDestination = geoLocations[Math.floor(Math.random() * geoLocations.length)];\n\nmsg.payload = {\n    type: \"GeoTrafficObserved\",\n    sourceIP: randomIP(),\n    destinationIP: randomIP(),\n    geoLocationSource: geoLocationSource,\n    geoLocationDestination: geoLocationDestination,\n    trafficVolume: trafficVolume,\n    countrySource: sourceCountry,\n    countryDestination: destinationCountry,\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 940,
+        "wires": [
+            [
+                "70ff9bbf78682449"
+            ]
+        ]
+    },
+    {
+        "id": "6582d0a42a7cbe7a",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "57a5dd492e43f828",
+        "name": "5. Trànsit geogràfic",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"GeoTrafficObserved\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"destinationIP\": \"{{destinationIP}}\",\n  \"geoLocationSource\": \"{{geoLocationSource}}\",\n  \"geoLocationDestination\": \"{{geoLocationDestination}}\",\n  \"trafficVolume\": {{trafficVolume}},\n  \"countrySource\": \"{{countrySource}}\",\n  \"countryDestination\": \"{{countryDestination}}\",\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 330,
+        "y": 940,
+        "wires": [
+            [
+                "b8e55e9b8849a5de"
+            ]
+        ]
+    },
+    {
+        "id": "b32ad0b2fe3bc189",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "57a5dd492e43f828",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d63fc120055f1815",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1130,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "6d9a442ba104454c",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1160,
+        "wires": [
+            [
+                "d63fc120055f1815",
+                "964ce91ac8702edf"
+            ]
+        ]
+    },
+    {
+        "id": "d5b5f89a9a9c7ba1",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "JavaScript",
+        "func": "// Generar IP aleatòria\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Generar nombre aleatori de connexions\nfunction randomConnections() {\n    return Math.floor(Math.random() * (100 - 10 + 1)) + 10; // Entre 10 i 100 connexions\n}\n\n// Connexions establertes i fallides\nconst successfulConnections = randomConnections();\nconst failedConnections = Math.floor(Math.random() * (5 - 0 + 1)); // Entre 0 i 5 connexions fallides\nconst totalConnections = successfulConnections + failedConnections;\n\nmsg.payload = {\n    type: \"ConnectionCountObserved\",\n    sourceIP: randomIP(),\n    successfulConnections: successfulConnections,\n    failedConnections: failedConnections,\n    totalConnections: totalConnections,\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1160,
+        "wires": [
+            [
+                "6d9a442ba104454c"
+            ]
+        ]
+    },
+    {
+        "id": "d5094ca16cb909e8",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": " 6. Recompte de connexions",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"ConnectionCountObserved\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"successfulConnections\": {{successfulConnections}},\n  \"failedConnections\": {{failedConnections}},\n  \"totalConnections\": {{totalConnections}},\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 360,
+        "y": 1160,
+        "wires": [
+            [
+                "d5b5f89a9a9c7ba1"
+            ]
+        ]
+    },
+    {
+        "id": "964ce91ac8702edf",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "3b8b15071e416cd9",
+        "type": "inject",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1320,
+        "wires": [
+            [
+                "1bd6a1e71fe164f4",
+                "d5094ca16cb909e8",
+                "5e8ffde50c3bbeb8"
+            ]
+        ]
+    },
+    {
+        "id": "4c7018a94396aaab",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1130,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "a19aa65da6ee7d60",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1320,
+        "wires": [
+            [
+                "4c7018a94396aaab",
+                "9f574fc1dcf38f79"
+            ]
+        ]
+    },
+    {
+        "id": "e5370fa739cfd1e3",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "JavaScript",
+        "func": "// Generar IP aleatòria\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Generar trànsit normal i trànsit actual\nconst normalTraffic = Math.floor(Math.random() * (1000 - 200 + 1)) + 200; // trànsit normal entre 200 i 1000 bytes\nconst currentTraffic = normalTraffic * (Math.random() > 0.5 ? 10 : 1); // Multiplica el trànsit per 10 en cas d'anomalia\n\n// Generar un port i un protocol aleatoris per a novetats\nconst protocols = [\"TCP\", \"UDP\", \"ICMP\", \"Torrents\", \"Proxies\"];\nconst newProtocol = protocols[Math.floor(Math.random() * protocols.length)];\nconst newPort = Math.floor(Math.random() * (65535 - 1024 + 1)) + 1024; // port entre 1024 i 65535\n\n// Generar el multiplicador del trànsit\nconst trafficMultiplier = currentTraffic / normalTraffic;\n\nmsg.payload = {\n    type: \"AnomalousBehaviorDetected\",\n    sourceIP: randomIP(),\n    normalTraffic: normalTraffic,\n    currentTraffic: currentTraffic,\n    trafficMultiplier: trafficMultiplier,\n    newProtocol: trafficMultiplier > 10 ? newProtocol : \"None\", // Si el trànsit es multiplica per 10, afegim un protocol desconegut\n    newPort: trafficMultiplier > 10 ? newPort : null, // Si el trànsit es multiplica per 10, afegim un port nou\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1320,
+        "wires": [
+            [
+                "a19aa65da6ee7d60"
+            ]
+        ]
+    },
+    {
+        "id": "1bd6a1e71fe164f4",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "7. Alertes de comportament anòmal",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"AnomalousBehaviorDetected\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"normalTraffic\": {{normalTraffic}},\n  \"currentTraffic\": {{currentTraffic}},\n  \"trafficMultiplier\": {{trafficMultiplier}},\n  \"newProtocol\": \"{{newProtocol}}\",\n  \"newPort\": {{newPort}},\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 380,
+        "y": 1320,
+        "wires": [
+            [
+                "e5370fa739cfd1e3"
+            ]
+        ]
+    },
+    {
+        "id": "9f574fc1dcf38f79",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "d4c9bcdef5e9d8be",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1150,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "e15812e72335f79f",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 1500,
+        "wires": [
+            [
+                "d4c9bcdef5e9d8be",
+                "6ef81229c53f7bda"
+            ]
+        ]
+    },
+    {
+        "id": "6bb9e3e889fbb654",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "JavaScript",
+        "func": "// Generar IP aleatòria per identificar router\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Generar dades de trànsit\nconst bytesIn = Math.floor(Math.random() * (500000 - 10000 + 1)) + 10000; // Bytes entrants aleatoris\nconst bytesOut = Math.floor(Math.random() * (500000 - 10000 + 1)) + 10000; // Bytes sortints aleatoris\nconst packetsIn = Math.floor(Math.random() * (20000 - 1000 + 1)) + 1000; // Paquets entrants\nconst packetsOut = Math.floor(Math.random() * (20000 - 1000 + 1)) + 1000; // Paquets sortints\n\n// Convertir bytes a Mbps (1 Mbps = 1,000,000 bits / 8 bits per byte)\nconst mbpsConsumed = ((bytesIn + bytesOut) * 8 / 1000000).toFixed(2); // Consum en Mbps\n\n// Generar VLAN aleatòria\nconst vlan = `VLAN-${Math.floor(Math.random() * 100)}`;\n\n// Generar el ratio de retransmissions TCP (d'entre 0 i 5%)\nconst tcpRetransmissionsRatio = (Math.random() * 0.05).toFixed(4);\n\n// Generar router aleatori\nconst router = randomIP();\n\n// Afegir timestamp\nconst timestamp = new Date().toISOString();\n\nmsg.payload = {\n    type: \"PerformanceMetricsAggregated\",\n    router: router,\n    bytesIn: bytesIn,\n    bytesOut: bytesOut,\n    packetsIn: packetsIn,\n    packetsOut: packetsOut,\n    mbpsConsumed: mbpsConsumed,\n    vlan: vlan,\n    tcpRetransmissionsRatio: tcpRetransmissionsRatio,\n    timestamp: timestamp\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1500,
+        "wires": [
+            [
+                "e15812e72335f79f"
+            ]
+        ]
+    },
+    {
+        "id": "5e8ffde50c3bbeb8",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": " 8. Mètriques de rendiment agregades",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"PerformanceMetricsAggregated\",\n  \"router\": \"{{router}}\",\n  \"bytesIn\": {{bytesIn}},\n  \"bytesOut\": {{bytesOut}},\n  \"packetsIn\": {{packetsIn}},\n  \"packetsOut\": {{packetsOut}},\n  \"mbpsConsumed\": {{mbpsConsumed}},\n  \"vlan\": \"{{vlan}}\",\n  \"tcpRetransmissionsRatio\": {{tcpRetransmissionsRatio}},\n  \"timestamp\": \"{{timestamp}}\"\n}\n",
+        "x": 390,
+        "y": 1500,
+        "wires": [
+            [
+                "6bb9e3e889fbb654"
+            ]
+        ]
+    },
+    {
+        "id": "6ef81229c53f7bda",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "f43e1dd9620df8c9",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "18c6a53636a6ff12",
+        "type": "inject",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1760,
+        "wires": [
+            [
+                "26e09fe3fad1f851",
+                "09ae00337918f3cf"
+            ]
+        ]
+    },
+    {
+        "id": "38b12efbd7e902ed",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1110,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "c9dabdf7793d8f8e",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1680,
+        "wires": [
+            [
+                "38b12efbd7e902ed",
+                "9e3a0fd96d62a1d0"
+            ]
+        ]
+    },
+    {
+        "id": "3587d89182f8deff",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "JavaScript",
+        "func": "const vpnProviders = [\"NordVPN\", \"ExpressVPN\", \"Surfshark\", \"CyberGhost\"];\nconst proxies = [\"ProxyServer1\", \"ProxyServer2\", \"ProxyServer3\", \"ProxyServer4\"];\nconst protocols = [\"TCP\", \"UDP\", \"ICMP\", \"HTTPS\"];\nconst ports = [80, 443, 53, 1080, 3128, 22, 8080];\n\n// Funció per generar IP aleatòria\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Funció per generar una localització geogràfica aleatòria\nfunction randomGeoLocation() {\n    const countries = [\"US\", \"RU\", \"CN\", \"IN\", \"BR\", \"FR\", \"ES\"];\n    return countries[Math.floor(Math.random() * countries.length)];\n}\n\n// Generar dades per a trànsit sospitós\nconst sourceIP = randomIP();\nconst destinationIP = randomIP();\nconst protocol = protocols[Math.floor(Math.random() * protocols.length)];\nconst port = ports[Math.floor(Math.random() * ports.length)];\nconst bytes = Math.floor(Math.random() * (10000 - 500 + 1)) + 500; // Generar bytes aleatoris\nconst timestamp = new Date().toISOString();\n\n// Determinar si el trànsit prové d'un VPN o Proxy\nconst isVPN = Math.random() < 0.2; // 20% de probabilitat que sigui VPN\nconst isProxy = Math.random() < 0.1; // 10% de probabilitat que sigui Proxy\n\nconst vpnProvider = isVPN ? vpnProviders[Math.floor(Math.random() * vpnProviders.length)] : null;\nconst geoLocation = isVPN || isProxy ? randomGeoLocation() : \"Unknown\";\n\n// Crear el missatge\nmsg.payload = {\n    type: \"SuspiciousNetworkTraffic\",\n    sourceIP: sourceIP,\n    destinationIP: destinationIP,\n    protocol: protocol,\n    port: port,\n    bytes: bytes,\n    timestamp: timestamp,\n    isVPN: isVPN,\n    isProxy: isProxy,\n    geoLocation: geoLocation,\n    vpnProvider: vpnProvider\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1680,
+        "wires": [
+            [
+                "c9dabdf7793d8f8e"
+            ]
+        ]
+    },
+    {
+        "id": "26e09fe3fad1f851",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "9-Trànsit sospitós (VPNs/Proxies)",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"SuspiciousNetworkTraffic\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"destinationIP\": \"{{destinationIP}}\",\n  \"protocol\": \"{{protocol}}\",\n  \"port\": {{port}},\n  \"bytes\": {{bytes}},\n  \"timestamp\": \"{{timestamp}}\",\n  \"isVPN\": {{isVPN}},\n  \"isProxy\": {{isProxy}},\n  \"geoLocation\": \"{{geoLocation}}\",\n  \"vpnProvider\": \"{{vpnProvider}}\"\n}\n",
+        "x": 360,
+        "y": 1680,
+        "wires": [
+            [
+                "3587d89182f8deff"
+            ]
+        ]
+    },
+    {
+        "id": "9e3a0fd96d62a1d0",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "15cd29cd742b9ea1",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1130,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "7188cd94ff567908",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1860,
+        "wires": [
+            [
+                "15cd29cd742b9ea1",
+                "4e64bdc39380e8e5"
+            ]
+        ]
+    },
+    {
+        "id": "16f976b2738a5978",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "JavaScript",
+        "func": "const torNodes = [\"198.51.100.1\", \"198.51.100.2\", \"198.51.100.3\"];  // Exemple d'IPs de nodes Tor\n\nconst protocols = [\"TCP\", \"UDP\", \"ICMP\", \"HTTPS\"];\nconst ports = [443, 80, 53, 1080, 3128];\n\n// Funció per generar IP aleatòria\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Generar dades per a trànsit sospitós de Tor\nconst sourceIP = randomIP();\nconst destinationIP = randomIP();\nconst protocol = protocols[Math.floor(Math.random() * protocols.length)];\nconst port = ports[Math.floor(Math.random() * ports.length)];\nconst bytes = Math.floor(Math.random() * (10000 - 500 + 1)) + 500; // Generar bytes aleatoris\nconst timestamp = new Date().toISOString();\n\n// Determinar si el trànsit prové de Tor\nconst isTor = torNodes.includes(sourceIP);  // Comprova si la IP d'origen està en la llista de nodes Tor\nconst geoLocation = isTor ? \"Hidden\" : \"Unknown\";\n\n// Crear el missatge\nmsg.payload = {\n    type: \"TorNetworkTraffic\",\n    sourceIP: sourceIP,\n    destinationIP: destinationIP,\n    protocol: protocol,\n    port: port,\n    bytes: bytes,\n    timestamp: timestamp,\n    isTor: isTor,\n    geoLocation: geoLocation,\n    torNode: isTor ? torNodes[Math.floor(Math.random() * torNodes.length)] : null\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1860,
+        "wires": [
+            [
+                "7188cd94ff567908"
+            ]
+        ]
+    },
+    {
+        "id": "09ae00337918f3cf",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "10-Detectar trànsit de Tor",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"TorNetworkTraffic\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"destinationIP\": \"{{destinationIP}}\",\n  \"protocol\": \"{{protocol}}\",\n  \"port\": {{port}},\n  \"bytes\": {{bytes}},\n  \"timestamp\": \"{{timestamp}}\",\n  \"isTor\": {{isTor}},\n  \"geoLocation\": \"{{geoLocation}}\",\n  \"torNode\": \"{{torNode}}\"\n}\n",
+        "x": 370,
+        "y": 1860,
+        "wires": [
+            [
+                "16f976b2738a5978"
+            ]
+        ]
+    },
+    {
+        "id": "4e64bdc39380e8e5",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "5ba851299043f444",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "076e8ac1ff1976af",
+        "type": "inject",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "8d6e5eabfb58985b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 2100,
+        "wires": [
+            [
+                "174eaa1b0d0ce256"
+            ]
+        ]
+    },
+    {
+        "id": "ecfd681e3b9ea6e8",
+        "type": "kafkajs-producer",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "8d6e5eabfb58985b",
+        "name": "",
+        "client": "e8c526757d7d7288",
+        "topic": "node-red",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 1110,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "8aaa469678428eab",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "8d6e5eabfb58985b",
+        "name": "Convertir a string JSON per a Kafka",
+        "func": "var data = msg.payload;\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 2100,
+        "wires": [
+            [
+                "ecfd681e3b9ea6e8",
+                "b35f6c9694052aef"
+            ]
+        ]
+    },
+    {
+        "id": "88a63af9795cb6b2",
+        "type": "function",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "8d6e5eabfb58985b",
+        "name": "JavaScript",
+        "func": "const sslCertificates = [\"valid-cert\", \"fake-cert\"];  // Simulem un certificat SSL vàlid i un de fals\nconst protocols = [\"TCP\", \"UDP\", \"ICMP\", \"HTTPS\"];\nconst ports = [443, 80, 8080, 3128]; // 3128 podria ser un port de proxy\nconst geoLocations = [\"USA\", \"Russia\", \"China\", \"Germany\"];\n\nfunction randomIP() {\n    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;\n}\n\n// Generar dades per a trànsit sospitós MITM\nconst sourceIP = randomIP();\nconst destinationIP = randomIP();\nconst protocol = protocols[Math.floor(Math.random() * protocols.length)];\nconst port = ports[Math.floor(Math.random() * ports.length)];\nconst bytes = Math.floor(Math.random() * (10000 - 500 + 1)) + 500;  // Generar bytes aleatoris\nconst timestamp = new Date().toISOString();\nconst isMITM = Math.random() < 0.2;  // 20% de probabilitats que sigui un MITM\nconst SSLMatch = isMITM ? \"fake-cert\" : \"valid-cert\";  // Si és MITM, el certificat serà fals\nconst geoLocation = geoLocations[Math.floor(Math.random() * geoLocations.length)];\nconst manipulatedTraffic = Math.random() < 0.1;  // 10% de probabilitats que el trànsit sigui manipulat\nconst isProxy = Math.random() < 0.3;  // 30% de probabilitats de trobar trànsit a través d'un proxy\n\n// Crear el missatge\nmsg.payload = {\n    type: \"MITMDetection\",\n    sourceIP: sourceIP,\n    destinationIP: destinationIP,\n    protocol: protocol,\n    port: port,\n    bytes: bytes,\n    timestamp: timestamp,\n    isMITM: isMITM,\n    SSLMatch: SSLMatch,\n    geoLocation: geoLocation,\n    manipulatedTraffic: manipulatedTraffic,\n    isProxy: isProxy\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2100,
+        "wires": [
+            [
+                "8aaa469678428eab"
+            ]
+        ]
+    },
+    {
+        "id": "174eaa1b0d0ce256",
+        "type": "data-generator",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "8d6e5eabfb58985b",
+        "name": "11-Detecció MITM",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n  \"type\": \"MITMDetection\",\n  \"sourceIP\": \"{{sourceIP}}\",\n  \"destinationIP\": \"{{destinationIP}}\",\n  \"protocol\": \"{{protocol}}\",\n  \"port\": {{port}},\n  \"bytes\": {{bytes}},\n  \"timestamp\": \"{{timestamp}}\",\n  \"isMITM\": {{isMITM}},\n  \"SSLMatch\": \"{{SSLMatch}}\",\n  \"geoLocation\": \"{{geoLocation}}\",\n  \"manipulatedTraffic\": {{manipulatedTraffic}},\n  \"isProxy\": {{isProxy}}\n}\n",
+        "x": 330,
+        "y": 2100,
+        "wires": [
+            [
+                "88a63af9795cb6b2"
+            ]
+        ]
+    },
+    {
+        "id": "b35f6c9694052aef",
+        "type": "debug",
+        "z": "497f9339409cef03",
+        "d": true,
+        "g": "8d6e5eabfb58985b",
+        "name": "debug 40",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "e8c526757d7d7288",
+        "type": "kafkajs-client",
+        "name": "",
+        "brokers": ":9092",
+        "clientid": "cliente",
+        "connectiontimeout": "3000",
+        "requesttimeout": "25000",
+        "advancedretry": false,
+        "maxretrytime": "30000",
+        "initialretrytime": "300",
+        "factor": "0.2",
+        "multiplier": "2",
+        "retries": "5",
+        "auth": "none",
+        "tlsselfsign": false,
+        "tlscacert": "",
+        "tlsclientcert": "",
+        "tlsprivatekey": "",
+        "tlspassphrase": "",
+        "saslssl": true,
+        "saslmechanism": "plain",
+        "loglevel": "error"
+    }
+]
