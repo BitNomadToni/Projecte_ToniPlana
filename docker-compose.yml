@@ -1,5 +1,4 @@
 #Projecte Toni Plana 028
-version: '3.8'
 
 services:
 #1-Input (entrada de dades): node-red, logstash, kafka (productors), zookeeper
@@ -23,8 +22,9 @@ services:
     ports:
       - "2055:2055/udp" # port extern per a Netflow
     volumes:
-      - logstash_data:/usr/share/logstash/data # dades de logstash
+      - logstash_data:/usr/share/logstash/data
       - ./logstash/pipeline:/usr/share/logstash/pipeline # carpeta de configuració
+      - ./logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml # archivo de pipelines
     depends_on:
       - kafka
     networks:
@@ -40,10 +40,11 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://:9092
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_HOURS: 24
     ports:
       - "9092:9092"
     depends_on:
@@ -117,6 +118,32 @@ services:
     networks:
       - valldigna_net
     restart: on-failure # Es reinicia si falla
+
+#   # OPCIONAL: Descomenta este servicio para importar automáticamente los dashboards
+#   # y visualizaciones de Kibana en una instalación limpia/nueva máquina.
+#   kibana-import-dashboards:
+#     image: curlimages/curl:latest
+#     container_name: kibana-import-dashboards
+#     volumes:
+#       - ./netflow_dashboards.ndjson:/tmp/netflow_dashboards.ndjson
+#     networks:
+#       - valldigna_net
+#     depends_on:
+#       - kibana
+#     entrypoint: >
+#       /bin/sh -c "
+#         echo 'Esperando a que Kibana esté listo...';
+#         until curl -s -I http://kibana:5601/api/status | grep -q 'HTTP/1.1 200'; do
+#           sleep 5;
+#         done;
+#         echo 'Kibana está listo. Importando dashboards y visualizaciones...';
+#         curl -X POST http://kibana:5601/api/saved_objects/_import \
+#           -H 'kbn-xsrf: true' \
+#           --form file=@/tmp/netflow_dashboards.ndjson \
+#           -s -o /tmp/import_result.json;
+#         echo 'Proceso completado. Resultado de la importación:';
+#         cat /tmp/import_result.json;
+#       "
 
 volumes:
   elastic_data: # indexos i dades d'elasticsearch

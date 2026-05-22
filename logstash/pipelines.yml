@@ -1,0 +1,6 @@
+- pipeline.id: udp_to_kafka
+  path.config: "/usr/share/logstash/pipeline/netflow_to_kafka.conf"
+- pipeline.id: kafka_to_file
+  path.config: "/usr/share/logstash/pipeline/kafka_to_file.conf"
+- pipeline.id: kafka_to_elastic
+  path.config: "/usr/share/logstash/pipeline/kafka_to_elastic.conf"
